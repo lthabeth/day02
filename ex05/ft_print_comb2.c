@@ -1,36 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_alphabet.c                                :+:      :+:    :+:   */
+/*   ft_print_comb2.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lthabeth <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/06/19 13:45:30 by lthabeth          #+#    #+#             */
-/*   Updated: 2020/06/23 13:35:24 by lthabeth         ###   ########.fr       */
+/*   Created: 2020/06/22 13:43:10 by lthabeth          #+#    #+#             */
+/*   Updated: 2020/06/23 12:04:16 by lthabeth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <unistd.h>
-void	ft_putchar(char c)
+#include<unistd.h>
+int ft_putchar(char c)
 {
 	write(1, &c, 1);
+	return(0);
 }
-void	ft_print_alphabet(void)
+void ft_print_comb2(void)
 {
-	char	alphabet;
-	alphabet = 'a';
-		while  (alphabet <= 'z')
+	int x;
+	int y;
+	x = 0;
+	y = 0;
+	while (x < 9)
+	{
+		while (y < 8)
 		{
- 			ft_putchar(alphabet);
-			alphabet++;
-		}
-ft_putchar('\n'); 
-}
+	
+		 	ft_putchar(x);
+			ft_putchar(y);
+			ft_putchar(' ');
+			if (x != y)
+			 y++;
+		 } y = x + 1;
+		x++;
+	} x = y +1;
+	}
 
-int	main()
+int main()
 {
- ft_print_alphabet();
- return (0);
+	ft_print_comb2();
+	return(0);
 }
-
-

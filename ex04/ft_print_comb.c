@@ -6,7 +6,7 @@
 /*   By: lthabeth <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/21 10:39:05 by lthabeth          #+#    #+#             */
-/*   Updated: 2020/06/21 15:25:39 by lthabeth         ###   ########.fr       */
+/*   Updated: 2020/06/23 12:55:16 by lthabeth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,19 +26,35 @@ void ft_putchar(char c)
 {
 	write(1,&c,1);
 }
-void ft_num(void)
+void ft_print_comb(void)
 {
 	int x;
 	int y;
-	n = 1;
-	while (x < 100)
+	int z;
+	x = 0;
+	y = 0;
+	z = 0;
+
+   while (x < 9)
+   { 
+	while (y < 8 )
 	{
-		ft_putchar(n);
-		n++;
-	}
+	while (z < 7);
+if ( x != y && y != z && x != z)
+ ft_putchar('0'+ x);
+ ft_putchar('0'+ y);
+ ft_putchar('0'+ z);
+
+z++;
+}
+z = y + 1;
+y++;
+}
+y = x + 1;
+x++;
 }
 int main()
 {
-	ft_num();
-	return(0);
+	ft_print_comb();
 }
+
